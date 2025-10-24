@@ -2,7 +2,6 @@ package com.example.SalesManagementSystem.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
@@ -22,7 +21,7 @@ public class Customer {
     private String address;
     private String type;
 
-    private BigDecimal debt = BigDecimal.ZERO;
+    private Double debt;
 
     @OneToMany(mappedBy = "customer")
     private List<Order> orders;
